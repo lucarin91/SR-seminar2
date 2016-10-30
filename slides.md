@@ -325,7 +325,7 @@ protection.
 ## Conclusions
 VMs are fundamental in the Cloud scenario and guaranteeing their security is very important. <!-- .element: class="fragment" -->
 
-Hypervisors have to improve their security and reliability.
+Hypervisors have to improve their security and reliability. <!-- .element: class="fragment" -->
 
 Being too drastic and requiring considerable "re-design" of the infrastructure nor NOVA NoHype approaches can be implemented in real life. <!-- .element: class="fragment" -->
 
