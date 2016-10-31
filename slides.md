@@ -33,6 +33,16 @@ There are cases in which, through hypervisor vulnerabilities, an attacker can ex
 
 Usually hypervisors have a large TCB.
 
+note:
+VM escape vulnerabilities:
+- CVE-2007-1744 – Directory traversal vulnerability in shared folders feature
+- CVE-2008-0923 – Path traversal vulnerability in VMware’s shared folders implementation
+- CVE-2009-1244 – Cloudburst (VMware virtual video adapter vulnerability)
+- CVE-2011-1751 – Missing hotplug check during device removal
+- CVE-2012-0217 – 64-bit PV guest privilege escalation vulnerability
+- CVE-2014-0983 – Oracle VirtualBox 3D acceleration multiple memory corruption vulnerabilities
+- VENOM (CVE-2015-3456) is unique in that it applies to a wide array of virtualization platforms, works on default configurations, and allows for direct arbitrary code execution.
+
 
 
 ## NoHype
