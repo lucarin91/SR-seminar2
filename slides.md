@@ -87,9 +87,9 @@ Gust OS kernel is modified, so that those operations are executed only at boot t
 
 
 ## Avoiding Indirection
-The hypervisors use indirection to modify the process IDs inside the guest OS so that they start counting from 0.
+The hypervisors use indirection to modify the processor IDs inside the guest OS so that they start from 0.
 
-With noHype and static allocation of VMs to core, each VM can access the correct process and avoids indirection.
+With noHype and static allocation of VMs to core, each VM can access the correct processor and avoids indirection.
 
 For the same reason re-route of the interrupts is removed.
 
@@ -138,15 +138,15 @@ This gives the possibility to the VM to handle the exit signal, so that the VM c
 ## Problems of this approach
 <div style="font-size: 25px;">
 
-- Static allocation of the resources.
+- Static allocation of the resources. <!-- .element: class="fragment" -->
+
+- Changes of existing hardware and virtualisation stack. <!-- .element: class="fragment" -->
 
 - The virtualisation layer could no longer be used for VMs interposition. <!-- .element: class="fragment" -->
 
 - Trust is still in the hypervisor. <!-- .element: class="fragment" -->
 
-- Changes of existing hardware and virtualisation stack. <!-- .element: class="fragment" -->
-
-- It only considers software attacks and cannot guard against wore complex attack. <!-- .element: class="fragment" -->
+- It only considers software attacks and cannot guard against wore complex attack (inspecting a VM disk, bus snooping and memory freezing). <!-- .element: class="fragment" -->
 
 - Modified Kernel on the Guest can introduce incompatibility with user software or new vulnerabilities. <!-- .element: class="fragment" -->
 
@@ -267,8 +267,7 @@ note:
 NOVA [60] is micro-kernel based VMM that decouples the traditional monolithic VMM into a component-based system, and improves security by introducing capability-based access control for different components in a VMM. The security of the management software in However, these systems aim at protecting the virtualization layer from external attacks to the VM stack, but without considering possible attacks that leverage legal maintenance operations from the cloud operators, which is a new requirement in multi-tenant cloud.
 
 However, these approaches mostly only protect
-VMMs from attacks from a malicious guest VM, without consider-
-203
+VMMs from attacks from a malicious guest VM, without consider
 ation of preventing an operator with control of management tools
 and control VM from tampering with or stealing users’ confidential
 data, especially external storage such as virtual disks. Further, they
@@ -287,8 +286,7 @@ and implementation of CloudVisor.
 In this vein, from-scratch
 hypervisors [38, 40, 42] have shown that particular security properties
 can be achieved by rearchitecting the platform, but they do not
-provide the rich set of features necessary for deployment in commercial
-hosting environments.
+provide the rich set of features necessary for deployment in commercial hosting environments.
 
 More recently, NOVA [42]
 uses a similar architecture and explicitly partitions the TCB into
@@ -337,7 +335,7 @@ VMs are fundamental in the Cloud scenario and guaranteeing their security is ver
 
 Hypervisors have to improve their security and reliability. <!-- .element: class="fragment" -->
 
-Being too drastic and requiring considerable "re-design" of the infrastructure nor NOVA NoHype approaches can be implemented in real life. <!-- .element: class="fragment" -->
+Being too drastic and requiring considerable "re-design" of the infrastructure nor NOVA NoHype approaches can be use in real application. <!-- .element: class="fragment" -->
 
 
 
