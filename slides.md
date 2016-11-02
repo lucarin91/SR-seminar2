@@ -33,14 +33,16 @@ There are cases in which, through hypervisor vulnerabilities, an attacker can ex
 
 Usually hypervisors have a large TCB.
 
-note:
-VM escape vulnerabilities:
-- CVE-2007-1744 – Directory traversal vulnerability in shared folders feature
-- CVE-2008-0923 – Path traversal vulnerability in VMware’s shared folders implementation
-- CVE-2009-1244 – Cloudburst (VMware virtual video adapter vulnerability)
-- CVE-2011-1751 – Missing hotplug check during device removal
-- CVE-2012-0217 – 64-bit PV guest privilege escalation vulnerability
-- CVE-2014-0983 – Oracle VirtualBox 3D acceleration multiple memory corruption vulnerabilities
+
+## VM escape vulnerabilities
+<div style="font-size: 28px;">
+
+- CVE-2007-1744: Directory traversal vulnerability in shared folders feature
+- CVE-2008-0923: Path traversal vulnerability in VMware’s shared folders implementation
+- CVE-2009-1244: Cloudburst (VMware virtual video adapter vulnerability)
+- CVE-2011-1751: Missing hotplug check during device removal
+- CVE-2012-0217: 64-bit PV guest privilege escalation vulnerability
+- CVE-2014-0983: Oracle VirtualBox 3D acceleration multiple memory corruption vulnerabilities
 - VENOM (CVE-2015-3456) is unique in that it applies to a wide array of virtualization platforms, works on default configurations, and allows for direct arbitrary code execution.
 
 
@@ -331,11 +333,11 @@ protection.
 
 
 ## Conclusions
-VMs are fundamental in the Cloud scenario and guaranteeing their security is very important. <!-- .element: class="fragment" -->
+VMs are fundamental in the Cloud scenario and guaranteeing their security is very important.
 
-Hypervisors have to improve their security and reliability. <!-- .element: class="fragment" -->
+Hypervisors have to improve their security and reliability.
 
-Being too drastic and requiring considerable "re-design" of the infrastructure nor NOVA NoHype approaches can be use in real application. <!-- .element: class="fragment" -->
+Being too drastic and requiring considerable "re-design" of the infrastructure nor NOVA NoHype approaches can be use in real application.
 
 
 
@@ -349,3 +351,5 @@ Being too drastic and requiring considerable "re-design" of the infrastructure n
 - Zhang, Y., Pan, W., Wang, Q., Bai, K., & Yu, M. (2012). **HypeBIOS: Enforcing VM Isolation with Minimized and Decomposed Cloud TCB.** Virginia Commonwealth University, Technical report.
 
 - Zhang, F., Chen, J., Chen, H., & Zang, B. (2011, October). **CloudVisor: retrofitting protection of virtual machines in multi-tenant cloud with nested virtualization.** In Proceedings of the Twenty-Third ACM Symposium on Operating Systems Principles (pp. 203-216). ACM.
+
+- Jason Geffner, CrowdStrike Senior Security Researcher (2015-05-21) **VENOM Vulnerability**, Available at: http://venom.crowdstrike.com/ (Accessed: 2016, October).
